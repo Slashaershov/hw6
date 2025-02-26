@@ -45,6 +45,7 @@ public class Main
         {
             System.out.println(year + " год не является високосным");
         }
+        System.out.println();
 
         //ex 4
         int deliveryDistance = 95;
@@ -68,6 +69,26 @@ public class Main
         System.out.println();
 
         //ex 5
+        byte monthNumber = 12;
+        if (monthNumber > 12 || monthNumber < 0)
+        {
+            System.out.println("Ты значит у нас тестировщик?!");
+        } else{
+            switch (monthNumber){
+                case 1,2,12:
+                    System.out.println("Зима. Холода. Одинокие дома");
+                    break;
+                case 3,4,5:
+                    System.out.println("Весна");
+                    break;
+                case 6,7,8:
+                    System.out.println("Лето,яркими лучами согрето");
+                    break;
+                case 9,10,11:
+                    System.out.println("Осень. ю в дождливый серый день пробежал по городу олень");
+                    break;
+            }
+        }
 
     }
 }
