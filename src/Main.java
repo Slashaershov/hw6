@@ -4,15 +4,15 @@ public class Main
     {
         //ex1
         byte clientOS = 0;
-        switch (clientOS)
+        if (clientOS == 0)
         {
-            case 0:
-                System.out.println("Установите версию приложения для iOS по ссылке");
-                break;
-            case 1:
-                System.out.println("Установите версию приложения для Android по ссылке");
-                break;
+            System.out.println("Установите версию приложения для iOS по ссылке");
         }
+        else if (clientOS == 1)
+        {
+            System.out.println("Установите версию приложения для Android по ссылке");
+        }
+
         System.out.println();
 
         //ex2
@@ -56,13 +56,13 @@ public class Main
             {
                 deliveryDaysCount = 1;
             }
-            if (deliveryDistance <= 60)
+            else if (deliveryDistance <= 60)
             {
-                deliveryDaysCount++;
+                deliveryDaysCount = 2;
             }
-            if (deliveryDistance <= 100)
+            else if (deliveryDistance <= 100)
             {
-                deliveryDaysCount++;
+                deliveryDaysCount = 3;
             }
             System.out.println("Потребуется дней: " + deliveryDaysCount);
         }
@@ -73,18 +73,21 @@ public class Main
         if (monthNumber > 12 || monthNumber < 0)
         {
             System.out.println("Ты значит у нас тестировщик?!");
-        } else{
-            switch (monthNumber){
-                case 1,2,12:
+        }
+        else
+        {
+            switch (monthNumber)
+            {
+                case 1, 2, 12:
                     System.out.println("Зима. Холода. Одинокие дома");
                     break;
-                case 3,4,5:
+                case 3, 4, 5:
                     System.out.println("Весна");
                     break;
-                case 6,7,8:
+                case 6, 7, 8:
                     System.out.println("Лето,яркими лучами согрето");
                     break;
-                case 9,10,11:
+                case 9, 10, 11:
                     System.out.println("Осень. ю в дождливый серый день пробежал по городу олень");
                     break;
             }
