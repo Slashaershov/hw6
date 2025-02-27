@@ -12,26 +12,21 @@ public class Main
         {
             System.out.println("Установите версию приложения для Android по ссылке");
         }
-
         System.out.println();
 
         //ex2
-        short yearIssue = 2010;
-        switch (clientOS)
+        short clientDeviceYear = 2015;
+        if (clientOS == 1)
         {
-            case 0:
-                if (yearIssue >= 2015)
-                {
-                    System.out.println("Установите версию приложения для iOS по ссылке");
-                }
-                else
-                {
-                    System.out.println("Установите облегченную версию приложения для Android по ссылке");
-                }
-                break;
-            case 1:
-                System.out.println("Установите версию приложения для Android по ссылке");
-                break;
+            System.out.println("Установите версию приложения для Android по ссылке");
+        }
+        else if (clientDeviceYear >= 2015)
+        {
+            System.out.println("Установите версию приложения для iOS по ссылке");
+        }
+        else
+        {
+            System.out.println("Установите облегченную версию приложения для Android по ссылке");
         }
         System.out.println();
 
@@ -70,28 +65,23 @@ public class Main
 
         //ex 5
         byte monthNumber = 12;
-        if (monthNumber > 12 || monthNumber < 0)
+        switch (monthNumber)
         {
-            System.out.println("Ты значит у нас тестировщик?!");
+            case 1, 2, 12:
+                System.out.println("Зима. Холода. Одинокие дома");
+                break;
+            case 3, 4, 5:
+                System.out.println("Весна");
+                break;
+            case 6, 7, 8:
+                System.out.println("Лето,яркими лучами согрето");
+                break;
+            case 9, 10, 11:
+                System.out.println("Осень. ю в дождливый серый день пробежал по городу олень");
+                break;
+            default:
+                System.out.println("Ты значит у нас тестировщик?!");
+                break;
         }
-        else
-        {
-            switch (monthNumber)
-            {
-                case 1, 2, 12:
-                    System.out.println("Зима. Холода. Одинокие дома");
-                    break;
-                case 3, 4, 5:
-                    System.out.println("Весна");
-                    break;
-                case 6, 7, 8:
-                    System.out.println("Лето,яркими лучами согрето");
-                    break;
-                case 9, 10, 11:
-                    System.out.println("Осень. ю в дождливый серый день пробежал по городу олень");
-                    break;
-            }
-        }
-
     }
 }
